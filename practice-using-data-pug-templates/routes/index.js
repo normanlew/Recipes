@@ -16,7 +16,7 @@ router.get('/recipes/:id', function(req, res, next) {
   
   if (recipe) {
     // 2. Pass the recipe data to the 'recipe' template
-    res.render('recipe');
+    res.render('recipe', {recipe});
   } else {
     res.sendStatus(404);
   }
